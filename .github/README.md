@@ -1,6 +1,7 @@
 # ENTSO-E Application Profiles Library
 
 v1.1.0 ICTC approved on 11 September 2025
+
 v1.1.1 patch release (bug solving) approved in CIM WG on 7 October 2025
 
 # Overview
