@@ -4,16 +4,18 @@ v1.1.0 ICTC approved on 11 September 2025
 v1.1.1 patch release (bug solving) approved in CIM WG on 7 October 2025
 
 # Overview
-This library contains all applications profiles for CGMES and Network Code Profiles (NCP) organised in a folder structure. The application profiles consists on vocabulary schemas (RDFS) and constraints (SHACL) derived form the information model in UML.
+This library contains all applications profiles for Common Grid Model Exchange Standard/Specification (CMGES) and Network Code Profiles (NCP) organised in a folder structure. The application profiles consist of vocabulary schemas (RDFS) and constraints (SHACL) derived from the information model in UML available on the [ENTSO-E CGMES Library](https://www.entsoe.eu/data/cim/cim-for-grid-models-exchange/#_ENTSO_E_CGMES_Extension_and_Profile).
 
-The folders revel which artifacts were used in which release and version of the CGMES and NCP. The folders are also dived into a *current release* and *previous release*. As ENTSO-E updates the artifats, the ones under *current release* will be moved to *previous release* as archived.
+The folders (and branches) revel which artifacts were used in which release and version of the CGMES and NCP. In the main branch, the folders are also dived into a current release and previous release. As ENTSO-E updates the artefacts, the ones under current release will be moved to previous release (and to additional branches) as archived.
 
-Note that for some of the previous versions folders, it exists an *Enchanced* folder. The content of such forder is an *a posteriori* updated version of the artifacts generated at a given time. This happens in cases where tooling was updated in the meantine and offers users using an archived version of the artifacts (i.e., NCP v2.2) bug fixes dicovered years after their release.
+Note that for some of the previous version’s folders (e.g., for CGMES v2.4, NCP v2.2), it exists an Enhanced folder. The content of such folder is an a posteriori updated version of the artifacts generated at a given time. This happens in cases where (profiling and validation) tooling was updated in the meantime and offers users using an archived, but updated version of the artifacts bug fixes discovered years after their release. 
 
-Enchanced versions of other *previous release* folders can be generated under request.
+Enhanced versions of other previous release folders can be generated under request.
+
+
 
 ### How to provide feedback
-When importing any data contained in the repository, you might find some bugs or issues to report. Please, open a GitHub issue and include your export log when applicable.
+When importing any data contained in the repository, you might find bugs or issues to report. Please, open a GitHub issue and include your export log when applicable. Additionally, please write an email to [cim@entsoe.eu](cim@entsoe.eu).
 
 Do not forget to read [CONTRIBUTING](https://github.com/entsoe/application-profiles-library/blob/main/.github/CONTRIBUTING.adoc) file.
 
