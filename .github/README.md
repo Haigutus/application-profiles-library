@@ -14,7 +14,6 @@ Note that for some of the previous version’s folders (e.g., for CGMES v2.4, NC
 Enhanced versions of other previous release folders can be generated under request.
 
 
-
 ### How to provide feedback
 When importing any data contained in the repository, you might find bugs or issues to report. Please, open a GitHub issue and include your export log when applicable. Additionally, please write an email to [cim@entsoe.eu](cim@entsoe.eu).
 
@@ -38,6 +37,38 @@ The application profiles are provided to facilitate the implementation of the pr
 Note that the application profile serialization based on RDFS and RDF XML syntax is defined in IEC 61970-501:2006 (Ed1) and CIM XML serialization is defined in IEC 61970-552:2016. However, current implementations deviate from these standards due to various reasons. For additional information, please refer to the latest version of the [RDF-syntax User Guide](https://www.entsoe.eu/data/cim/cim-for-grid-models-exchange/#_ENTSO_E_CGMES_Extension_and_Profile) CGMES Library.
 
 The content of the Application Profiles Library is published under [Apache 2.0 open-source license](https://github.com/entsoe/application-profiles-library/blob/main/LICENSE.txt).
+
+# ENTSO-E GitHub Repository Structure
+
+ENTSO-E offers the [application-profiles-library](https://github.com/entsoe/application-profiles-library/) GitHub Repository storing all the published CIM related artifacts (including CGMES and the NCP).
+
+The main branch stores all the available artifacts and several snapshots in time will constitute the application profiles library releases as such. This branch is continuously under development and ENTSO-E CIM WG so it can be considered the _edge_ or _development_ branch. 
+
+On the other hand, the repository is also subdivided into several branches corresponding to packages of profiles’ sets releases. With this structure, ENTSO-E aims at enhancing transparency and clearly associating a set of machine artifacts to profiles releases.
+
+As an example, someone interested in the NCP v2.2 release artifacts can access them in the main branch but also in the branch _ncp-v2-2_.
+
+This current document establishes in [section 6](# Application Profiles – File Naming Convention) the naming convention used for the artifacts in the application profiles library. However, in order to exploit git functionalities for version control, the artifacts in the main branch may not include the version number in the files’ name. Every time a change is done in a file, it must increase the version number but if one does this, git will not capture the changes as it needs the file name to be static. 
+
+Only once a release is ready for publication, a new branch will be created with the subset of artifacts corresponding to it. 
+As an example, imagine that the current release of the NCP is version 2.4. In the moment of publication, the main branch and the _ncp-v2-4-0_ contain the exact same. One month later, ENTSO-E CIM WG detects a bug in the release’ artifacts (e.g., the _AssessedElement-AP-Voc-RDFS2020.rdf_) and fixes it in the main branch, thus the two previous branches differ. When the next release v2.5 of the NCP is ready, a new branch _ncp-v2-5-0_ will be created and the process restarted.
+
+Regardless of the file naming convention used exclusively for human readability, all artifacts contain version fields in the dataset header (_dcat:isVersionOf_, _dcterms:conformsTo_, etc.) which shall be used for machine readability.
+
+## Special Mentions
+
+### Solving inconsistency in the use of dcterms ontology
+
+All current releases of CGMES ([v3.0](https://github.com/entsoe/application-profiles-library/tree/cgmes-v3-0)) and NCP ([v2.4](https://github.com/entsoe/application-profiles-library/tree/ncp-v2-4-0)) RDFS and SHACL artifacts are updated to replace the term _dct_ with the term _dcterms_. This is done because dct was initially use but later decided not to use. This change enhances consistency.
+
+### Addition of header schema for CGMES v3.0
+
+For context, CGMES v3.0 profiles have the metadata under owl:Onthology. On the other hand, CGMES v2.4 profiles have the metadata under entsoe:<profile>Version.
+
+A maintenance request detected that [File Header RDFS of CGMES v3.0](https://github.com/entsoe/application-profiles-library/blob/main/CGMES/CurrentRelease/RDFS/61970-600-2_Header-AP-Voc-RDFS2019.rdf) was missing the metadata. This originated a the addition of a [new File Header RDFS](https://github.com/entsoe/application-profiles-library/blob/main/CGMES/CurrentRelease/RDFS/61970-600-2_Header-AP-Voc-RDFS2020.rdf) that features a new Ontology file header added to the schema (RDFS).
+
+It is recommended to use the [new File Header RDFS](https://github.com/entsoe/application-profiles-library/blob/main/CGMES/CurrentRelease/RDFS/61970-600-2_Header-AP-Voc-RDFS2020.rdf) instead of the [old](https://github.com/entsoe/application-profiles-library/blob/main/CGMES/CurrentRelease/RDFS/61970-600-2_Header-AP-Voc-RDFS2019.rdf).
+
 
 # RDF schemas (RDFS)
 The RDFS 2020 export of the RDFS augmented version is based on IEC 61970-501:2006 (Ed1). The package contains RDFS for CGMES v3.0 and NC Profiles. These are the files which file name contains “Voc-RDFS2020”.
