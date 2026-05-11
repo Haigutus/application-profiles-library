@@ -3135,7 +3135,7 @@ er:Ontology  rdf:type     owl:Ontology;
         dcterms:publisher     "ENTSO-E"@en;
         dcterms:rightsHolder  "ENTSO-E"@en;
         dcterms:title         "Equipment Reliability Vocabulary"@en;
-        owl:versionIRI    <2.4/2.4>;
+        owl:versionIRI    <2.4>;
         owl:versionInfo   "2.4.0"@en;
         dcat:keyword      "ER";
         dcat:theme        "constraint"@en .
