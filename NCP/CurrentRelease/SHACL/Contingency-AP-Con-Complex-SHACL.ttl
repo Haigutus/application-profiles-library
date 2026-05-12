@@ -91,11 +91,11 @@ coc:ContingencyEquipment  a          sh:NodeShape ;
 
 coc:ContingencyEquipment.contingentStatus-allowedValues
         a               sh:PropertyShape ;
-        sh:description  "The allowed value for the ContingencyEquipment.contingentStatus is ContingencyEquipmentStatusKind.outOfService." ;
-        sh:message      "ContingencyEquipment.contingentStatus is not ContingencyEquipmentStatusKind.outOfService." ;
+        sh:description  "The allowed values for the ContingencyEquipment.contingentStatus are ContingencyEquipmentStatusKind.outOfService and ContingencyEquipmentStatusKind.inService." ;
+        sh:message      "ContingencyEquipment.contingentStatus is not ContingencyEquipmentStatusKind.outOfService or ContingencyEquipmentStatusKind.inService." ;
         sh:path         cim:ContingencyEquipment.contingentStatus ;
         sh:group        coc:COgroup ;
-		sh:in     		(cim:ContingencyEquipmentStatusKind.outOfService) ;
+		sh:in     		(cim:ContingencyEquipmentStatusKind.outOfService cim:ContingencyEquipmentStatusKind.inService) ;
         sh:name         "C:NC:CO:ContingencyEquipment.contingentStatus:allowedValues" ;
         sh:order        2 ;
         sh:severity     sh:Violation .
