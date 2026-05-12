@@ -26,7 +26,7 @@ dm:Ontology  rdf:type         owl:Ontology;
         dcterms:publisher     "ENTSO-E"@en;
         dcterms:rightsHolder  "ENTSO-E"@en;
         dcterms:title         "Dataset metadata vocabulary"@en;
-        owl:versionIRI        <3.0/3.0>;
+        owl:versionIRI        <https://ap-con.cim4.eu/DatasetMetadata-Simple/3.0>;
         owl:versionInfo       "3.0.0"@en;
         dcat:keyword          "DM";
         dcat:theme            "constraint"@en .
