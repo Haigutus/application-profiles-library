@@ -7,9 +7,9 @@ v1.1.1 patch release (bug solving) approved in CIM WG on 7 October 2025
 # Overview
 This library contains all applications profiles for Common Grid Model Exchange Standard/Specification (CMGES) and Network Code Profiles (NCP) organised in a folder structure. The application profiles consist of vocabulary schemas (RDFS) and constraints (SHACL) derived from the information model in UML available on the [ENTSO-E CGMES Library](https://www.entsoe.eu/data/cim/cim-for-grid-models-exchange/#_ENTSO_E_CGMES_Extension_and_Profile).
 
-The folders (and branches) revel which artifacts were used in which release and version of the CGMES and NCP. In the main branch, the folders are also dived into a current release and previous release. As ENTSO-E updates the artefacts, the ones under current release will be moved to previous release (and to additional branches) as archived.
+The folders (and branches) reveal which artifacts were used in which release and version of the CGMES and NCP. In the main branch, the folders are also dived into a current release and previous release. As ENTSO-E updates the artefacts, the ones under current release will be moved to previous release (and to additional branches) as archived.
 
-Note that for some of the previous version’s folders (e.g., for CGMES v2.4, NCP v2.2), it exists an Enhanced folder. The content of such folder is an a posteriori updated version of the artifacts generated at a given time. This happens in cases where (profiling and validation) tooling was updated in the meantime and offers users using an archived, but updated version of the artifacts bug fixes discovered years after their release. 
+Note that for some of the previous version’s folders (e.g., for CGMES v2.4, NCP v2.2), an Enhanced folder exists. Such folders have a version that is updated after the official version release. This happens in cases where (profiling and validation) tooling was updated in the meantime and offers users using an archived, but updated version of the artifacts bug fixes discovered years after their release. 
 
 Enhanced versions of other previous release folders can be generated under request.
 
